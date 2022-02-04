@@ -1,9 +1,22 @@
 ﻿using DesignPatterns.Patterns;
 using DesignPatterns.Patterns.Creational;
 
-IRunnable runnable = new RunFactoryMethod();
-runnable = new RunFactoryMethod();
-runnable = new RunAbstractFactory();
+IRunnable[] runnables = { new RunFactoryMethod(), new RunAbstractFactory() };
 
 
-runnable.Run();
+foreach (var runnable in runnables)
+{
+    var title = runnable.GetType().Name;
+
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine(new string('-', title.Length));
+    Console.WriteLine(runnable.GetType().Name);
+    Console.WriteLine(new string('-', title.Length));
+    Console.ForegroundColor = ConsoleColor.White;
+
+    runnable.Run();
+
+    Console.WriteLine();
+    Console.WriteLine();
+}
+
