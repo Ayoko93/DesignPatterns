@@ -1,7 +1,13 @@
 ﻿using DesignPatterns.Patterns;
 using DesignPatterns.Patterns.Creational;
 
-IRunnable[] runnables = { new RunFactoryMethod(), new RunAbstractFactory() };
+IRunnable[] runnables = { 
+    new RunFactoryMethod(), 
+    new RunAbstractFactory(), 
+    new RunBuilder(),
+    new RunPrototype(),
+    new RunSingleton(),
+};
 
 
 foreach (var runnable in runnables)
