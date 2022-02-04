@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using DesignPatterns.Patterns;
+using DesignPatterns.Patterns.Creational;
+
+IRunnable runnable = new RunFactoryMethod();
+runnable = new RunFactoryMethod();
+runnable = new RunAbstractFactory();
+
+
+runnable.Run();
